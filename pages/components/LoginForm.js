@@ -1,6 +1,7 @@
 import { Button, Checkbox, Form, Input } from "antd";
 import React from "react";
 import "antd/dist/antd.css";
+import Link from "next/link";
 
 const LoginForm = () => {
   const onFinish = (values) => {
@@ -71,21 +72,23 @@ const LoginForm = () => {
                 borderColor: "#76323f",
                 marginRight: 10,
                 color: "#eee",
+                fontWeight: "bold",
               }}
             >
               LOGIN
             </Button>
             <Button
-              htmlType="Regiter"
+              htmlType="Signup"
               style={{
                 backgroundColor: "#F9EAE1",
                 width: 130,
                 height: 30,
                 borderRadius: 10,
                 marginLeft: 10,
+                fontWeight: "bold",
               }}
             >
-              SIGN UP
+              <Link href="./register">SIGN UP</Link>
             </Button>
           </div>
         </Form.Item>
